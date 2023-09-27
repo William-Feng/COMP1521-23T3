@@ -1,0 +1,60 @@
+(a) la   $t0, aa
+
+$t0 = 0x10010000
+
+
+(b) lw   $t0, bb
+
+$t0 = 666
+
+
+(c) lb   $t0, bb
+
+666 gets converted in hexadecimal
+Retrieve the 1st byte
+
+
+(d) lw   $t0, aa+4
+
+Address is 0x10010004
+$t0 = 666
+
+
+(e) la   $t1, cc
+    lw   $t0, ($t1)
+
+$t1 = 0x10010008
+$t0 = 1
+    
+
+(f) la   $t1, cc
+    lw   $t0, 8($t1)
+
+$t1 = 0x10010008
+Load the word (integer) from the address 0x10010010
+$t0 = 5
+    
+
+(g) li   $t1, 8
+    lw   $t0, cc($t1)
+
+$t1 = 8
+Load the word (integer) from the address 0x10010010
+$t0 = 5
+
+    
+(h) la   $t1, cc
+    lw   $t0, 2($t1)
+
+$t1 = 0x10010008
+Load the word (integer) from the address 0x1001000A
+Memory alignment error (not a multiple of 4)
+
+    
+Address       Data Definition
+0x10010000    aa:  .word 42
+0x10010004    bb:  .word 666
+0x10010008    cc:  .word 1
+0x1001000C         .word 3
+0x10010010         .word 5
+0x10010014         .word 7
