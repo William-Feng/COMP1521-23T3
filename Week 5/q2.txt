@@ -1,0 +1,44 @@
+Representing decimal in 8 bit binary, 3 digit octal and 2 digit hexadecimal
+
+(a) 1
+        Binary: 0000 0001
+        Octal: 0001
+        Hexadecimal: 0x01
+
+
+(b) 8
+        8 = 2^3 = 0 * 2^7 + 0 * 2^6 + 0 * 2^5 + 0 * 2^4 + 1 + 2^3 + 0 * 2^2 + 0 * 2^1 + 0 * 2^0
+        
+        Binary: 0000 1000
+        Octal: 0010
+        Hexadecimal: 0x08
+
+
+(d) 15
+        15 = 8 + 4 + 2 + 1 = 2^3 + 2^2 + 2^1 + 2^0
+        15 = 8 + 7 = 1 * 8^1 + 7 * 8^0
+        Hexadecimal values for (0 - 15): 0123456789ABCDEF
+        
+        Binary: 0000 1111
+        Octal: 0017
+        Hexadecimal: 0x0F
+
+
+(g) 127
+        127 = 64 + 32 + 16 + 8 + 4 + 2 + 1 (this is also the binary value of 1000 0000 - 1)
+        127 =  64 + 8 * 7 + 7 = 1 * 8^2 + 7 * 8^1 + 7 * 8^0
+        127 = 112 + 15 = 7 * 16^1 + 15 * 16^0
+
+        Binary: 0111 1111
+        Octal: 0177
+        Hexadecimal: 0x7F
+
+
+(h) 200
+        200 = 128 + 64 + 8 = 2^7 + 2^6 + 2^3
+        200 = 64 * 3 + 8 = 3 * 8^2 + 1 * 8^1 + 0 * 8^0
+        200 = 12 * 16^1 + 8 * 16^0
+
+        Binary: 1100 1000
+        Octal: 0310
+        Hexadecimal: 0xC8
