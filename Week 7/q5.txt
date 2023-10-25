@@ -1,0 +1,43 @@
+1st bit: sign
+Next 8 bits: exponent
+Remaining 23 bits: fraction
+
+(-1)^sign * (1 + fraction) * 2^(exponent - 127)
+-------------------------------------------------
+
+2.5
+
+The largest power of 2 that's less than 2.5 is 2 = 2^1
+
+Exponent - 127 = 1
+Exponent = 128
+
+2.5 / 2 = 1.25
+
+1 + Fraction = 1.25
+Fraction = 0.25 = 1/4 = 2^(-2)
+
+Sign: 0 (positive)
+Exponent: 2^7
+Fraction: 2^(-2)
+
+0 10000000 01000000000000000000000
+-------------------------------------------------
+
+27.0
+
+The largest power of 2 that's less than 27 is 16 = 2^4
+
+Exponent - 127 = 4
+Exponent = 131
+
+27 / 16 = 1.6875
+
+1 + Fraction = 1.6875
+Fraction = 0.6875 = 0.5 + 0.125 + 0.0625
+
+Sign: 0 (positive)
+Exponent: 2^7 + 2^1 + 2^0
+Fraction: 2^(-1) + 2^(-3) + 2^(-4)
+
+0 10000011 10110000000000000000000

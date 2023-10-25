@@ -1,0 +1,9 @@
+On a 16-bit system, we have 2^16 = 65536 possible integers that we can represent.
+Possible range for signed integers (int16_t) is: -2^15 ~ (2^15 - 1) = -32768 ~ 32767.
+
+(30000 + 30000) will overflow to the negative values.
+
+We need to specify that we are dealing with unsigned integers.
+Possible range for unsigned integers (uint16_t) is: 0 ~ (2^16 - 1) = 0 ~ 65535.
+
+Solution: (30000u + 30000u)
