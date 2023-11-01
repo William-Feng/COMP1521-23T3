@@ -1,0 +1,23 @@
+Consider a file of size 10000 bytes, open for reading on file descriptor fd,
+initially positioned at the start of the file (offset 0).
+
+What will be the file position after each of these calls to lseek()?
+Assume that they are executed in sequence and one will change the file state that the next one deals with.
+
+lseek(fd, 0, SEEK_END);
+10000 byte offset
+
+lseek(fd, -1000, SEEK_CUR);
+9000 byte offset
+
+lseek(fd, 0, SEEK_SET);
+0 byte offset
+
+lseek(fd, -100, SEEK_SET);
+0 byte offset
+
+lseek(fd, 1000, SEEK_SET);
+1000 byte offset
+
+lseek(fd, 1000, SEEK_CUR);
+2000 byte offset

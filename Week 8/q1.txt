@@ -1,0 +1,9 @@
+(a) /home/cs1521/web
+(b) /
+(c) ..
+(d) cat is a file that contains machine code
+(e) home is a directory
+(f) tty0 is a character special file
+
+Hard link: ln secret.txt hard_link.txt
+Soft link: ln -s secret.txt symbolic_link.txt
