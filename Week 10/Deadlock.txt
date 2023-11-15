@@ -1,0 +1,37 @@
+DEADLOCK
+
+--------------------------------------------------
+
+Say for example, we have two threads, A and B.
+They need both resource 1 and resource 2 in order to finish.
+
+Thread A                         Thread B
+Resource 1                       Resource 2
+
+Thread A is trying to get Resource 2.
+However, thread B has Resource 2.
+Thus, Thread A cannot continue.
+
+Check with Thread B.
+Thread B is trying to get Resource 1.
+However, thread A has Resource 1.
+Thus, Thread B cannot continue either.
+
+Check with Thread A...
+Deadlock occurring.
+
+--------------------------------------------------
+
+To prevent deadlocks, we need the resources to happen in order!
+Global order of acquisition: Resource 1 --> Resource 2.
+
+Thread A                         Thread B
+Resource 1                       
+
+Thread B tries to get Resource 1, but can't because it's occupied by A.
+Thread B can't get Resource 2 by our order of acquisition to prevent deadlocks.
+Therefore, thread A will acquire Resource 2.
+And so thread A runs to completion because it has both resources.
+
+All the resources can then be provided to thread B, which can run to completion.
+Here, there is no longer deadlock present.
